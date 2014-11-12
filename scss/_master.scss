@@ -1,0 +1,35 @@
+/* Master */
+
+// Background 
+body {
+	background: url('/brenham/images/body-background.png') repeat-x #191B22;
+	background-position-y: 150px;
+}
+
+
+// Header 
+header {
+	background: $black;
+}
+
+
+// Text 
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+// Site Logo 
+.site-logo-wrapper a:hover {
+	opacity: .75;
+}
+.site-logo-wrapper {
+	@include breakpoint(small) {
+		padding-top: 15px;
+	}
+	img {
+		max-width: 268px;
+	}
+}

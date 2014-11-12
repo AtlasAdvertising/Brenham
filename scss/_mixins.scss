@@ -1,0 +1,53 @@
+/* Breakpoint Mixins */
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+/* Placeholders */
+%input {
+  background: #EBEBEB;
+  border: none;
+  outline: 0;
+  padding: 6px 5px;
+}
+
+%button {
+	background: $utility-grey;
+	border: 0;
+	color: $blue;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	font-weight: 700;
+	height: 40px;
+	line-height: 40px;
+	outline: 0;
+	padding: 0 25px;
+	text-transform: uppercase;
+	transition: color 0.25s, background 0.25s;
+	&:hover {
+	  background: $red;
+	  color: #fff;
+	  text-decoration: none;
+	}
+}
+
+%widget-header {
+	background: $secondary-blue;
+	color: #fff;
+	font-family: 'Avenir W01', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 45px;
+	text-align: center;
+	text-transform: uppercase;
+}

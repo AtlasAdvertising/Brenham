@@ -1,0 +1,90 @@
+/* Media Center */
+
+// Page Background 
+#secondaryWrapper {
+	.container {
+		background: #fff;
+	}
+}
+
+
+// Page Header
+.media-center-header {
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+
+// Intro Text
+.media-center-text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+}
+
+
+// Social Icons
+.media-center-social-icons {
+	color: $blue;
+	font-size: 48px;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	li {
+		float: left;
+		margin: 0 15px 0 0;
+	}
+	a {
+		color: $blue;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+
+// Video Player
+.secondary-content {
+	.VideoGallerySlider {
+		margin: 10px 0 30px;
+		position: relative;
+		z-index: 1;
+		img.rsImg.rsMainSlideImage {
+			width: 100% !important;
+			margin: 0 !important;
+		}
+	}
+}
+
+
+// News
+.media-center-title {
+	color: $blue;
+	font-family: 'Trajan W01', serif;
+	font-size: 20px;
+	font-weight: 900;
+	margin: 0 0 15px;
+	text-transform: uppercase;
+}
+.news-list {
+	list-style: none;
+	li {
+		position: relative;
+		&:before {
+			color: $blue;
+			content: "\f09e";
+			font-family: 'FontAwesome';
+			font-size: 20px;
+			left: -25px;
+			position: absolute;
+		}
+	}
+}
+
+
+// Show More/Less Buttons
+.show-more,
+.show-less {
+	@extend %button;
+}
