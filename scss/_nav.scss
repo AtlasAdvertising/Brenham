@@ -2,7 +2,7 @@
 
 // Mobile Menu
 nav#my-menu {
-	background: #C38A11;
+	background: #F4F2F2;
 	z-index: 999999;
 	li a {
 		color: #000;
@@ -39,6 +39,9 @@ nav#my-menu {
 	.mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
 		margin-left: 0;
 	}
+}
+.search-wrapper-mobile {
+	border: 1px solid $black;
 }
 #search-mobile {
 	color:#000;
@@ -344,7 +347,7 @@ ul#mobile-social {
 					text-decoration: none;
 				}
 			}
-			&.HighLighted a {
+			&.HighLighted > a {
 				background-color: $secondary-blue; 
 				border-color: $black;
 				color: #FFFFFF;
@@ -360,12 +363,16 @@ ul#mobile-social {
 				display: none;
 				position: absolute;
 				top: 102%;
-				background: #5387D4;
+				background: $utility-blue;
 				border-radius: 2px;
 				overflow: hidden;
 				padding: 5px 0;
 				z-index: 10;
+				a {
+					color: #fff;
+				}
 				li {
+					display: inline-block;
 					margin-bottom: 0;
 					a {
 						background: transparent;

@@ -7,11 +7,24 @@
 	margin: 30px 0 0;
 	padding: 30px 0;
 }
+.footer-logo {
+	margin: 0 0 25px;
+	@include breakpoint(small) {
+		margin: 0;
+	}
+	img {
+		max-width: 100%;
+	}
+}
 .signup-header {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-weight: 900;
 	margin: 0 0 10px;
+}
+#signupForm {
+  margin: 0 0 25px;
+  overflow: hidden;
 }
 input#email,
 input#emailBtn {
@@ -40,7 +53,10 @@ input#emailBtn {
 .contact-wrapper {
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
-	text-align: right;
+	text-align: center;
+	@include breakpoint(small) {
+		text-align: right;
+	}
 	.office-name {
 		font-size: 17px;
 		font-weight: 900;
@@ -62,6 +78,9 @@ input#emailBtn {
 	}
 	a.office-email {
 		color: #fff;
+		&:hover {
+			color: $red;
+		}
 	}
 	.office-address:before,
 	.office-phone:before,

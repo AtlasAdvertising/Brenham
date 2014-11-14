@@ -6,7 +6,7 @@
 	font-family: 'Trajan W01', serif;
 	font-size: 26px;
 	font-weight: 700;
-	margin: 0;
+	margin: 0 -15px;
 	position: relative;
 	img {
 		max-width: 100%;
@@ -159,11 +159,11 @@
 .secondary-wrapper {
 	.container {
 		background: #fff;
-		padding-top: 25px;
 	}
 }
 .secondary-content {
-	padding: 15px 0 50px;
+	padding-bottom: 50px;
+	padding-top: 15px;
 }
 .secondary-content {
 	color: $black;
@@ -208,4 +208,7 @@
 	img {
 		max-width: 100%;
 	}
+}
+.editable-text table {
+    width: 100%;
 }

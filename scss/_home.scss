@@ -2,19 +2,62 @@
 
 // Map Area 
 #home-map-wrapper {
+	margin: 0 -10px;
+	&:hover {
+		.map-button-wrapper {
+	    display: block;
+		}
+	}
 	img {
 		max-width: 100%;
+	}
+	.map-button-wrapper {
+		@extend %button;
+		background: $red;
+		display: none;
+		left: 25%;
+		position: absolute;
+		top: 40%;
+		a {
+			color: #fff;
+		}
+		&:hover {
+			background: $grey;
+			a{
+				color: $blue;
+			}
+		}
+	}
+	.button-wrapper {
+		@extend %button;
+		font-size: 13px;
+		height: 50px;
+		line-height: 13px;
+		width: 175px;
+	}
+	.button-group {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 375px;
 	}
 }
 
 
 // Web Parts
 #home-webparts-wrapper {
+	ul.news-list {
+		height: 260px;
+	}
+	#Sidebar_Downloads ul {
+		@include breakpoint(small) {
+			height: 260px;
+		}
+	}
 	#Sidebar_Downloads ul,
 	ul.news-list {
 		color: $black;
 		font-family: 'Roboto', sans-serif;
-		height: 260px;
 		list-style: none;
 		margin: 0 0 50px;
 		overflow: hidden;
@@ -131,7 +174,37 @@ ul.news-list {
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	line-height: 1.25;
+	margin: 0 0 30px;
 	@include breakpoint(small) {
 		font-size: 13px;
+		margin: 0;
 	}
+}
+.image img {
+  width: 82%;
+}
+.rsArrow {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.rsArrow {
+  position: absolute;
+  top: 32%;
+	&:before {
+		color: $grey;
+		font-family: 'FontAwesome';
+		font-size: 24px;
+	}
+}
+.rsArrowLeft {
+  left: 0;
+  &:before {
+  	content: "\f053";
+  }
+}
+.rsArrowRight {
+  right: 0;
+  &:before {
+  	content: "\f054";
+  }
 }

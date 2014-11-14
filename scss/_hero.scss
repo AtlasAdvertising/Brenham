@@ -3,20 +3,27 @@
 	margin: 0;
 	.caption {
 		background: $utility-blue;
-		bottom: 0;
 		color: #fff;
-		float: left;
 		font-family: 'Roboto', sans-serif;
 		padding: 20px 55px 20px 25px;
-		position: absolute;
-		top: 0;
-		width: 44%;
+		width: 100%;
+		@include breakpoint(small) {
+			bottom: 0;
+			float: left;
+			position: absolute;
+			top: 0;
+			width: 44%;
+		}
 	}
 	.image {
+		display: none;
 		float: right;
 		position: relative;
 		width: 62%;
 		z-index: 1;
+		@include breakpoint(small) {
+			display: block;
+		}
 		img {
 			width: 125%;
 		}
@@ -39,11 +46,17 @@
 	}
 	.description {
 		font-size: 12px;
+		margin: 0 0 15px;
+		@include breakpoint(small) {
+			margin: 0;
+		}
 	}
 	.button-wrapper {
 		@extend %button;
-		bottom: 25px;
-		position: absolute;
+		@include breakpoint(small) {
+			bottom: 25px;
+			position: absolute;
+		}
 		a {
 			color: $utility-blue;
 			&:hover {
