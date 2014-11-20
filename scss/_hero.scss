@@ -8,21 +8,27 @@
 		padding: 20px 55px 20px 25px;
 		width: 100%;
 		@include breakpoint(small) {
+			border-right: 3px solid #DFE3E7;
 			bottom: 0;
 			float: left;
 			position: absolute;
 			top: 0;
-			width: 44%;
+			width: 42.75%;
 		}
 	}
 	.image {
 		display: none;
 		float: right;
+		left: 23%;
 		position: relative;
-		width: 62%;
+		width: 86%;
 		z-index: 1;
 		@include breakpoint(small) {
 			display: block;
+		}
+		@include breakpoint(medium) {
+			left: auto;
+			width: 62%;
 		}
 		img {
 			width: 125%;

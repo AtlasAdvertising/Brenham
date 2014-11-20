@@ -26,7 +26,6 @@
 // No Header Image
 .secondary-header-wrapper.no-image {
 	color: #fff;
-	margin: 0;
 	.section-header {
 		background: $header-blue;
 		bottom: 0;
@@ -108,10 +107,14 @@
 		margin: 0 2px;
 	}
 }
+.breadCrumbs {
+	margin-top: 10px;
+}
 
 
 // My Fav's
 .PageUtility { 
+	margin-top: 15px;
 	z-index: 1 !important;
 	.PageUtility_Wrapper { 
 		width: 320px; 
