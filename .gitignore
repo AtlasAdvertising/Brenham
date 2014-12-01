@@ -2,3 +2,5 @@
 gulpfile.js
 *.sublime-project
 *.sublime-workspace
+images/
+node_modules/

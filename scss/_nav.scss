@@ -42,9 +42,9 @@ nav#my-menu {
 	.mm-list > li:after {
 		border-color: #755309;
 	}
-	.mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
-		margin-left: 0;
-	}
+	//.mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
+	//	margin-left: 0;
+	//}
 }
 .search-wrapper-mobile {
 	background: $black;
@@ -332,12 +332,12 @@ ul#mobile-social {
 			margin:0 0 5px 0;
 			float: left;
 			position: relative;
-			> a:not(:only-child):after {
-				content: "\f0d7"; 
-				font-family: "FontAwesome"; 
-				font-size: 12px; 
-				margin-left: 5px;
-			}
+			//> a:not(:only-child):after {
+			//	content: "\f0d7"; 
+			//	font-family: "FontAwesome"; 
+			//	font-size: 12px; 
+			//	margin-left: 5px;
+			//}
 			a {
 				color: $secondary-blue; 
 				background-color: #FFFFFF; 

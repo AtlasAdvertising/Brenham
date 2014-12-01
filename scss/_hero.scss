@@ -1,19 +1,28 @@
 /* Hero Slider */
 #hero-wrapper {
-	margin: 0;
+	margin: 0 auto;
+	background: #184B6D;
+	@include breakpoint(small) {
+		padding: 0 15px;
+		background: transparent;
+	}
 	.caption {
 		background: $utility-blue;
 		color: #fff;
 		font-family: 'Roboto', sans-serif;
-		padding: 20px 55px 20px 25px;
+		padding: 20px;
 		width: 100%;
 		@include breakpoint(small) {
+			padding: 20px 40px 20px 25px;
 			border-right: 3px solid #DFE3E7;
 			bottom: 0;
 			float: left;
 			position: absolute;
 			top: 0;
 			width: 42.75%;
+		}
+		@include breakpoint(large) {
+			padding: 20px 55px 20px 25px;
 		}
 	}
 	.image {
@@ -46,6 +55,12 @@
 	.subtitle {
 		font-family: 'Trajan W01', serif;
 		font-size: 36px;
+		@include breakpoint(small) {
+			font-size: 28px;
+		}
+		@include breakpoint(medium) {
+			font-size: 36px;
+		}
 		@include breakpoint(large) {
 			font-size: 40px;
 		}
@@ -58,16 +73,40 @@
 		}
 	}
 	.button-wrapper {
-		@extend %button;
+		font-size: 0;
+		margin: 10px 0;
 		@include breakpoint(small) {
-			bottom: 25px;
 			position: absolute;
+			bottom: 20px;
+			left: 0;
+			width: 100%;
+			margin: 0;
+		}
+		.button {
+			@extend %button;
+			height: auto;
+			line-height: 1.2;
+			padding: 10px 20px;
+			@include breakpoint(small) {
+				padding: 5px 20px;
+				font-size: 14px;
+			}
+			@include breakpoint(medium) {
+				padding: 10px 20px;
+				font-size: 16px;
+			}
 		}
 		a {
 			color: $utility-blue;
 			&:hover {
 				color: #fff;
 			}
+		}
+		> div {
+			display: inline-block;
+			width: 50%;
+			text-align: center;
+			padding: 0 3px;
 		}
 	}
 }

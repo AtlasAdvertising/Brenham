@@ -2,14 +2,23 @@
 
 // Map Area 
 #home-map-wrapper {
-	margin: 0 -10px;
+	margin: 0 -15px;
+	position: relative;
 	&:hover {
 		.map-button-wrapper {
 	    display: block;
 		}
 	}
+	.map-wrapper {
+		position: relative;
+		overflow: hidden;
+		height: 219px;
+	}
 	img {
-		max-width: 100%;
+		position: absolute;
+		left: -9999px;
+		right: -9999px;
+		margin: auto;
 	}
 	.map-button-wrapper {
 		@extend %button;
@@ -29,45 +38,97 @@
 		}
 	}
 	.button-wrapper {
-		background: $blue;
-		display: table;
-		@extend %button;
-		float: left;
-		font-size: 13px;
-		height: 50px;
-		line-height: 13px;
-		margin: 0 10px 10px 0;
-		padding-bottom: 10px;
-		padding-top: 10px;
-		text-align: center;
-		width: 170px;
-		&:nth-child(even) {
-			margin-right: 0;
-		}
-		&:nth-child(3),
-		&:nth-child(4) {
-			margin-bottom: 0;
-		}
-		a {
-			color: $grey;
-			display: table-cell;
-			vertical-align: middle;
-		}
+		// background: $blue;
+		// display: table;
+		// @extend %button;
+		// float: left;
+		// font-size: 13px;
+		// height: 50px;
+		// line-height: 13px;
+		// margin: 0 10px 10px 0;
+		// padding-bottom: 10px;
+		// padding-top: 10px;
+		// text-align: center;
+		// width: 170px;
+		// &:nth-child(even) {
+		// 	margin-right: 0;
+		// }
+		// &:nth-child(3),
+		// &:nth-child(4) {
+		// 	margin-bottom: 0;
+		// }
+		// a {
+		// 	color: $grey;
+		// 	display: table-cell;
+		// 	vertical-align: middle;
+		// }
+
 	}
 	.button-group {
-    position: absolute;
-    right: 15px;
-    top: 50px;
-    width: 360px;
-    @include breakpoint(large) {
-    	top: 70px;
-    }
+		background: #fff;
+		padding: 15px;
+		margin: 0 15px;
+		@include breakpoint(medium) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: transparent;
+			width: 375px;
+			font-size: 0;
+			margin: 0;
+		}
+		@include breakpoint(large) {
+			width: 400px;
+		}
+		a {
+			@extend %button;
+			display: block;
+			text-align: center;
+			margin: 0 0 10px 0;
+			@include breakpoint(medium) {
+				font-size: 13px;
+				display: inline-block;
+				width: 48%;
+				line-height: 1.1;
+				height: auto;
+				padding: 10px 22px;
+				margin: 0 1% 10px 1%;
+				background: #194c6c;
+				color: #d5d4d5;
+			}
+			@include breakpoint(large) {
+				width: 46%;
+				margin: 0 2% 10px 2%;
+			}
+		}
+		&:before {
+			content: "MAP CENTER";
+			font-family: 'Trajan W01', serif;
+			font-weight: bold;
+			font-size: 30px;
+			color: #194b6d;
+			display: block;
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
 	}
 }
 
 
 // Web Parts
 #home-webparts-wrapper {
+	.news-link {
+		font-family: 'Roboto', sans-serif;
+		color: #194c6c;
+		font-size: 18px;
+		display: inline-block;
+		margin: 20px 0;
+		&:before {
+			content: "";
+			font-family: 'FontAwesome';
+			margin: 0 5px 0 0;
+		}
+	}
 	ul.news-list {
 		height: 260px;
 	}
@@ -81,7 +142,7 @@
 		color: $black;
 		font-family: 'Roboto', sans-serif;
 		list-style: none;
-		margin: 0 0 50px;
+		//margin: 0 0 50px;
 		overflow: hidden;
 		padding: 0;
 		@include breakpoint(small) {
@@ -91,7 +152,8 @@
 }
 #inner-webparts-wrapper {
 	background: #fff;
-	padding: 25px;
+	padding: 25px 25px 0 25px;
+
 }
 .webpart-title,
 #home-webparts-wrapper .SidebarTitle,
@@ -150,6 +212,7 @@ ul.news-list {
 		display: none;
 	}
 	.SidebarListMyFavorites {
+		display: none;
 		clear: right;
 		float: right;
 	}

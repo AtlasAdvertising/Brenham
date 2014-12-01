@@ -26,13 +26,31 @@ a {
 
 
 // Site Logo 
-.site-logo-wrapper a:hover {
-	opacity: .75;
-}
 .site-logo-wrapper {
 	@include breakpoint(small) {
-		padding-top: 15px;
+		padding: 0;
+		margin: 15px 0 0 0;
 	}
+	@include breakpoint(medium) {
+		padding: 0 15px;
+		margin: 15px 0 0 0;
+	}
+	@include breakpoint(large) {
+		margin: 0;
+	}
+	a {
+		display: inline-block;
+		max-width: 85%;
+		margin: 10px 0;
+		@include breakpoint(small) {
+			max-width: 100%;
+		}
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+.site-logo-wrapper {
 	img {
 		max-width: 100%;
 		@include breakpoint(large) {
