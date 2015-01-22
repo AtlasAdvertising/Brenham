@@ -51,10 +51,57 @@ a {
 	}
 }
 .site-logo-wrapper {
+	transition: all 0.2s linear 0.2s;
 	img {
 		max-width: 100%;
 		@include breakpoint(large) {
 			max-width: 268px;
+		}
+	}
+}
+
+.stick {
+	position: fixed;
+	top: -30px;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	opacity: 0.95;
+	.site-logo-wrapper {
+		visibility: hidden;
+		opacity: 0;
+	}
+	.sticky-utility {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.sticky-utility {
+	transition: all 0.2s linear 0.2s;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	visibility: hidden;
+	opacity: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+		li {
+			display: inline-block;
+			vertical-align: middle;
+				a {
+				font-size: 24px;
+				color: #fff;
+				opacity: 0.3;
+				padding: 3px;
+				display: block;
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 }
