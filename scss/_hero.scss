@@ -21,8 +21,12 @@
 			top: 0;
 			width: 42.75%;
 		}
+		@include breakpoint(medium) {
+			width: 42.325%;
+		}
 		@include breakpoint(large) {
 			padding: 20px 55px 20px 25px;
+			width: 41.8%;
 		}
 	}
 	.image {
@@ -40,7 +44,10 @@
 			width: 62%;
 		}
 		img {
-			width: 125%;
+			width: 115%;
+			@include breakpoint(large) {
+				width: 100%;
+			}
 		}
 	}
 	.subtitle,

@@ -236,6 +236,59 @@ ul.news-list {
 }
 
 
+// Web Parts: Featured Properties
+
+.FeaturedProperty {
+	margin: 0 0 25px;
+}
+
+.FeaturedProperty_Title {
+	font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.FeaturedProperty_Thumbnail {
+  clear: left;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.FeaturedProperty_SubTitle {
+  color: #858585;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.FeaturedProperty_DetailsLink {
+	margin: 5px 0 0;
+	a {
+		color: $red;
+		font-family: Helvetica, arial, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.FeaturedProperty_SearchLink {
+	text-align: right;
+	a {
+		color: #898989;
+		&:hover {
+			color: #000;
+		}
+		&:after {
+			content: "\f061";
+			font-family: "FontAwesome";
+			margin: 0 0 0 5px;
+		}
+	}
+}
+
+
 // About Section
 #home-about-wrapper {
 	background: #fff;
