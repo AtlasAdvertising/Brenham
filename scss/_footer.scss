@@ -50,7 +50,13 @@ input#email:-ms-input-placeholder {
 }
 input#emailBtn {
 	@extend %button;
+	font-size: 15px;
+	padding: 0;
 	width: 35%;
+	@include breakpoint(medium) {
+		font-size: 17px;
+		padding: 0 25px;
+	}
 }
 .contact-wrapper {
 	color: #fff;
